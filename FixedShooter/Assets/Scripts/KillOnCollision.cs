@@ -8,7 +8,6 @@ public class KillOnCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject);
             
             if (collision.gameObject != null)
                 GameManager.Instance.KillPlayer();

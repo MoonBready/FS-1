@@ -26,9 +26,15 @@ public class PlayerInput : MonoBehaviour
 
         transform.position += movement * Time.deltaTime * moveSpeed;
 
-        OnPlayerDeath();
 
-        if (Input.GetButton("Fire1"))
+        
+
+        OnPlayerDeath();
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
@@ -46,6 +52,7 @@ public class PlayerInput : MonoBehaviour
             spriteRenderer.enabled = false;
             this.enabled = false;
             retryScreen.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }

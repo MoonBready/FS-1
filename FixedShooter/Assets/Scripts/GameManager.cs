@@ -82,6 +82,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(currentLevelIndex);
     }
 
+    public void MoveToLevel()
+    {
+        currentLevelIndex = 0;
+        currentLevelIndex++;
+        SceneManager.LoadScene(1);
+    }
+
     public void RestartGame()
     {
         Lives = 3;
