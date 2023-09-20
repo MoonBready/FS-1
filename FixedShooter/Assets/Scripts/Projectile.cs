@@ -11,4 +11,14 @@ public class Projectile : MonoBehaviour
     {
         this.transform.position += this.direction * this.speed * Time.deltaTime;
     }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Enemy")
+        {
+            Destroy(this.gameObject);
+        }
+        
+    }
 }

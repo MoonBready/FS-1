@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Awake()
     {
-        for(int row = 0; row <this.rows; row++)
+        for(int row = 0; row < this.rows; row++)
         {
             float width = 2.0f * (this.columns - 1);
             float height = 2.0f * (this.rows - 1);

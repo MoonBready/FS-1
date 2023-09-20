@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private int animationFrame;
 
-    private void Awakee()
+    private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
